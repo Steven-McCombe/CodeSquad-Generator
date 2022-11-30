@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Steven-McCombe/CodeSquad-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }

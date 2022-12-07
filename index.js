@@ -118,10 +118,23 @@ Add a Team member
                 addMember()
                 //otherwise write the file.
             } else {
-                console.log("WriteFile")
+                writeFile()
             }
         }    
         )
 }
+
+const writeFile = data => {
+    fs.writeFile('./dist/test.html', data, err => {
+        // Error Handling
+        if (err) {
+            console.log(err);
+            return;
+        // Team created and Index.html
+        } else {
+            console.log("Your team has been created!")
+        }
+    })
+};
 
 addMember()

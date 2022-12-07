@@ -1,6 +1,6 @@
 //Requiring the Intern file in the lib directory
 const Intern = require('../lib/Intern');
-
+//Runs a test with 4 parameters if the data returns as a match the test will pass 
 describe("Intern", () => {
     it("should return an object containing a Name, Id and Email Address", () => {
         const intern = new Intern ('Steven', 69, "smccombe93@gmail.com", "St-Patricks")

@@ -1,3 +1,4 @@
+//Function to generate HTML card for manager with data received from inquirer prompts 
 const managerCard = function (manager) {
     return `
     <div class="card" style="width: 16rem; border-radius:10px;">
@@ -13,7 +14,7 @@ const managerCard = function (manager) {
       </div>
     `;
 }
-
+//Function to generate HTML card for Intern with data received from inquirer prompts 
 const internCard = function (intern) {
     return `
             <div class="card" style="width: 16rem; border-radius:10px;">
@@ -29,7 +30,7 @@ const internCard = function (intern) {
               </div>
     `;
 } 
-
+//Function to generate HTML card for Engineer with data received from inquirer prompts 
 const engineerCard = (engineer) => {
     return`
     <div class="card" style="width: 16rem; border-radius:10px;">
@@ -45,39 +46,32 @@ const engineerCard = (engineer) => {
       </div>`
 }
 
-
+//function to return HTML in order to write file
 const cardTemplate = function (data) {
-console.log(data)
   // array for cards 
   let htmlArr = [, , , ]
-
+//Loops through the data and adds the HTML Cards to an array based on what the user input
   for (let i = 0; i < data.length; i++) {
       const employeeData = data[i];
       const role = employeeData.getRole();
-console.log(role)
       switch (role) { 
           case "Manager": { 
               // managerCard(employeeData);
               htmlArr.push(managerCard(employeeData));
-              console.log(managerCard); 
           break
           }
           case "Engineer": { 
-              // engineerCard(employeeData);
               htmlArr.push(engineerCard(employeeData));
-              console.log(engineerCard); 
           break
           }
           case "Intern": { 
-              // internCard(employeeData);
               htmlArr.push(internCard(employeeData));
-              console.log(internCard); 
           break
           }
               
       }
   }
-
+//returns the boiler plate html with the added cards. 
  return`
  <!DOCTYPE html>
  <html lang="en">
@@ -109,7 +103,7 @@ console.log(role)
  `;
   }
 
-
+//export the function
 module.exports = {cardTemplate};
 
   

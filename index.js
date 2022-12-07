@@ -1,6 +1,9 @@
 // import node
 const fs = require('fs');
 const inquirer = require('inquirer')
+//Require html template page
+const {cardTemplate, writeHTML} = require('./src/HTMLtemplate');
+
 // import classes
 const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
@@ -118,14 +121,15 @@ Add a Team member
                 addMember()
                 //otherwise write the file.
             } else {
-                writeFile()
+                 writeFile(cardTemplate(teamMembers))
+                
             }
         }    
         )
 }
 
 const writeFile = data => {
-    fs.writeFile('./dist/test.html', data, err => {
+    fs.writeFile('./dist/index.html', data, err => {
         // Error Handling
         if (err) {
             console.log(err);

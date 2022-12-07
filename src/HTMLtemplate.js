@@ -1,7 +1,7 @@
 const managerCard = function (manager) {
     return `
     <div class="card" style="width: 16rem; border-radius:10px;">
-        <div class="card-body bg-primary text-white rounded-top" >
+        <div class="card-body bg-danger text-white rounded-top" >
           <h5 class="card-title">${manager.name}</h5>
           <p class="card-text">Manager</p>
         </div>
@@ -17,7 +17,7 @@ const managerCard = function (manager) {
 const internCard = function (intern) {
     return `
             <div class="card" style="width: 16rem; border-radius:10px;">
-                <div class="card-body bg-primary text-white rounded-top" >
+                <div class="card-body bg-success text-white rounded-top" >
                   <h5 class="card-title">${intern.name}</h5>
                   <p class="card-text">Intern</p>
                 </div>

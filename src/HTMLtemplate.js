@@ -91,7 +91,7 @@ console.log(role)
  </head>
  <body>
  <div class="container main">
- <div class="container header d-flex justify-content-center bg-primary text-white" style="border-radius:10px; padding:10px; border: 2px solid white;">
+ <div class="container header d-flex justify-content-center bg-secondary text-white" style="border-radius:10px; padding:10px; ">
  <h1 class="titleText">CodeSquad</h1>
  </div>
  <div class="container cards d-flex gap-2 flex-wrap">
